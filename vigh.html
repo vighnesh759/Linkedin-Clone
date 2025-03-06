@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>SkillSphere</title>
+
+        <link rel="shortcut icon" type="image/png" href="/images/skillsphere2.png" />
+        <link rel="stylesheet" href="style.css" />
+
+       
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header id="main-header">
+            <div>
+                <div>
+                    <img
+                        id="header-logo"
+                        src="/images/skillsphere2.png"
+                        alt="LinkedIn"
+                    />
+                    <img
+                        id="header-picture-menu"
+                        src="/images/picture.jpeg"
+                        alt="Profile picture"
+                    />
+                    <span id="header-picture-menu-bars">
+                        <span class="fas fa-bars"></span>
+                    </span>
+
+                    <div>
+                        <input
+                            id="search"
+                            type="text"
+                            placeholder="       Search"
+                            onfocus="toggleSearchInput()"
+                            onblur="toggleSearchInput()"
+                        />
+                        <span id="search-icon" class="fas fa-search"></span>
+                        <span id="search-button" class="fas fa-search"></span>
+                    </div>
+                    <span class="fas fa-comments"></span>
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <div id="home" class="selected">
+                                <span class="fas fa-home"></span>
+                                <span class="nav-item-text">Home</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="fas fa-user-friends"></span>
+                                <span class="nav-item-text">My Network</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="fas fa-suitcase"></span>
+                                <span class="nav-item-text">Jobs</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="fas fa-envelope"></span>
+                                <span class="nav-item-text">Messaging</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="fas fa-bell"></span>
+                                <span class="nav-item-text">Notifications</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="right-border">
+                                <img
+                                    src="/images/pic.jpeg"
+                                    alt="Profile picture"
+                                />
+
+                                <span class="nav-item-text">
+                                    Me<span class="fas fa-caret-down"> </span
+                                ></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="fas fa-th"></span>
+
+                                <span class="nav-item-text"
+                                    >Work<span class="fas fa-caret-down"> </span
+                                ></span>
+                            </div>
+                        </li>
+                        <li id="premium">
+                            <div>
+                                <a href="#">Try Premium Free for 1 Month</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- LOADING PAGE -->
+        <div id="loading-page">
+            <div>
+                <img src="/images/skillsphere2.png" alt="" />
+                <div id="dot-loader">
+                    <div class="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MAIN CONTAINER -->
+        <div class="container">
+            <!-- ADS -->
+            <section id="ads">
+                
+            </section>
+            <!-- LEFT ASIDE -->
+            <div id="left-aside-wrapper">
+                <aside id="left-aside">
+                    <div id="profile-card">
+                        <div id="background"></div>
+                        <div id="profile-info">
+                            <img
+                                src="/images/pic.jpeg"
+                                alt="Profile picture"
+                            />
+                            <strong id="profile-name"
+                                >Nayan Govilkar</strong
+                            >
+                            <small>3D Artist</small>
+                        </div>
+                        <div id="profile-links">
+                            <a href="#">
+                                <span>
+                                    Recent visitors
+                                </span>
+                                <span class="profile-number">
+                                    19.7k
+                                </span>
+                            </a>
+                            <a href="#">
+                                <span>
+                                    Connections
+                                </span>
+                                <span class="profile-number">
+                                    450
+                                </span>
+                            </a>
+                        </div>
+                        <span>Grow your network</span>
+                        <a href="#">
+                            <span>Access exclusive tools & insights</span>
+                            <span id="profile-premium">
+                                <span id="profile-square">■</span> Try Premium
+                                Free for 1 Month</span
+                            >
+                        </a>
+                    </div>
+                    <div id="profile-groups">
+                        <section>
+                            <header
+                                onmouseover="showProfileGroupIcon(this)"
+                                onmouseout="showProfileGroupIcon(this)"
+                            >
+                                <span>Recent</span>
+                                <span
+                                    class="fas fa-angle-up"
+                                    onclick="toggleProfileGroupList(this)"
+                                ></span>
+                            </header>
+                            <ul class="group-list">
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span>Blender Community</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-hashtag"></span>
+                                    <span>#Blenderreacts</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-hashtag"></span>
+                                    <span>#3DModelling</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span>3D Artists</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span>Blender Lovers</span>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <header
+                                onmouseover="showProfileGroupIcon(this)"
+                                onmouseout="showProfileGroupIcon(this)"
+                            >
+                                <span class="group-title">Arists and Community</span>
+                                <span
+                                    class="fas fa-angle-up"
+                                    onclick="toggleProfileGroupList(this)"
+                                ></span>
+                            </header>
+                            <ul>
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span id="aaaa">React Game Developers</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span>Blender India</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-users"></span>
+                                    <span>Product Visualization</span>
+                                </li>
+                            </ul>
+                            <div class="group-list">
+                                <a href="#">See all</a>
+                            </div>
+                        </section>
+                        <section>
+                            <header
+                                onmouseover="showProfileGroupIcon(this)"
+                                onmouseout="showProfileGroupIcon(this)"
+                            >
+                                <span class="group-title">
+                                    Followed Hashtags</span
+                                >
+                                <span
+                                    class="fas fa-angle-up"
+                                    onclick="toggleProfileGroupList(this)"
+                                ></span>
+                            </header>
+                            <ul>
+                                <li>
+                                    <span class="fas fa-hashtag"></span>
+                                    <span>Blender</span>
+                                </li>
+                                <li>
+                                    <span class="fas fa-hashtag"></span>
+                                    <span>3DArtist</span>
+                                </li>
+                            </ul>
+                            <a href="#">See all</a>
+                        </section>
+                        <a href="#">Discover more</a>
+                    </div>
+                </aside>
+            </div>
+            <!-- MAIN -->
+            <div id="main-wrapper">
+                <main id="main-section">
+                    <div id="share-box">
+                        <div id="button-box">
+                            <button id="btn-post">
+                                <span class="fas fa-edit"></span>
+                                <span id="btn-text">Start a post</span>
+                            </button>
+                            <button id="btn-picture">
+                                <span class="fas fa-camera"></span>
+                            </button>
+                            <button id="btn-video">
+                                <span class="fas fa-video"></span>
+                            </button>
+                            <button id="btn-document">
+                                <span class="fas fa-file"></span>
+                            </button>
+                        </div>
+                        <div id="link-box">
+                            <a href="#">Write an article</a>
+                            <span>on SkillSphere</span>
+                        </div>
+                    </div>
+                    <div id="feed-sort">
+                        <hr />
+                        <button>
+                            <span>Sort by:</span>
+                            <strong>Top</strong>
+                            <span class="fas fa-sort-down"></span>
+                        </button>
+                    </div>
+                    <article>
+                        <div id="post-author">
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="/images/vigh2.jpeg"
+                                        alt=""
+                                    />
+                                    <div>
+                                        <div>
+                                            <strong id="post-author-name"
+                                                >Vighnesh Walankar</strong
+                                            >
+                                            <span>
+                                                <span>&nbsp;·&nbsp;</span>
+                                                1st</span
+                                            >
+                                        </div>
+                                        <span
+                                            >Web Developer at Congnizant
+                                            </span
+                                        >
+                                        <span>1d</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                            </div>
+                        </div>
+                        <div id="post-data">
+                            <p>
+                                Yesterday I had a conversation with
+                                <span>Nayan Govilkar</span>,3D Generalist at Santa Monica Studios
+                                 , and found out that he had contributed in the making of God Of War 4. I think you should check
+                                this out ;)
+                            </p>
+                            <p id="post-translation">
+                                <button>See translation</button>
+                            </p>
+                            <center>
+                            <video src="video/sample.mp4" width="530px" height="60%" controls></video>
+                           
+                        </center>
+                        </div>
+                        <div id="post-interactions">
+                            <div id="interactions-amount">
+                                <span
+                                    id="like-icon"
+                                    class="fas fa-thumbs-up fa-flip-horizontal"
+                                ></span>
+                                <span
+                                    id="heart-icon"
+                                    class="fas fa-heart"
+                                ></span>
+                                <span id="amount-info"
+                                    >15k <span>&nbsp;·&nbsp;</span> 1.2k
+                                    Comments</span
+                                >
+                            </div>
+                            <div id="interactions-btns">
+                                <button>
+                                    <span
+                                        class="far fa-thumbs-up fa-flip-horizontal"
+                                    ></span>
+                                    <span>Like</span>
+                                </button>
+                                <button>
+                                    <span
+                                        class="far fa-comment-dots fa-flip-horizontal"
+                                    ></span>
+                                    <span>Comment</span>
+                                </button>
+                                <button>
+                                    <span class="far fa-share-square"></span>
+                                    <span>Share</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div id="post-author">
+                            <a href="#">
+                                
+                                <div>
+                                    
+                                     <img 
+                                        src="/images/example-person3.jpeg"
+                                        alt=""
+                                    />  
+                                
+                                    <div>
+                                        <div>
+                                            <strong id="post-author-name"
+                                                >Vedant Sutar</strong
+                                            >
+                                            <span>
+                                                <span>&nbsp;·&nbsp;</span>
+                                                1st</span
+                                            >
+                                        </div>
+                                        <span>Web Designer at SL Systems</span>
+                                        <span>15h</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                            </div>
+                        </div>
+                        <div id="post-data">
+                            <p>
+                                You all could check
+                                <span>Vighnesh Walankar</span>'s Github, he has
+                                many academic projects using technologies such
+                                as Javascript, React, Redux, Sagas, HTML, CSS
+                                and others.
+                                
+                                
+                            </p>
+                            <p id="post-translation">
+                                <button>See translation</button>
+                            </p>
+                            <center>
+                            <img src="/images/Github.png" alt="" />
+                        </center>
+                        </div>
+                        <div id="post-interactions">
+                            <div id="interactions-amount">
+                                <span
+                                    id="like-icon"
+                                    class="fas fa-thumbs-up fa-flip-horizontal"
+                                ></span>
+                                <span id="amount-info"
+                                    >180k <span>&nbsp;·&nbsp;</span> 60k
+                                    Comments</span
+                                >
+                            </div>
+                            <div id="interactions-btns">
+                                <button>
+                                    <span
+                                        class="far fa-thumbs-up fa-flip-horizontal"
+                                    ></span>
+                                    <span>Like</span>
+                                </button>
+                                <button>
+                                    <span
+                                        class="far fa-comment-dots fa-flip-horizontal"
+                                    ></span>
+                                    <span>Comment</span>
+                                </button>
+                                <button>
+                                    <span class="far fa-share-square"></span>
+                                    <span>Share</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </main>
+            </div>
+            
+
+            
+            <!-- RIGHT ASIDE -->
+            <aside id="right-aside">
+                <div id="rec-section">
+                    <div>
+                        <header>
+                            <span>Add to your feed</span>
+                            <span
+                                class="fas fa-info-circle"
+                                onmouseover="showRecommendationsInfo(this)"
+                                onmouseout="showRecommendationsInfo(this)"
+                            >
+                                <div id="float-info">
+                                    <span>
+                                        Follow things that interest you to
+                                        personalize your feed.
+                                    </span>
+                                    <a href="#">Learn more.</a>
+                                </div>
+                                <span>►</span>
+                                <div id="square"></div>
+                            </span>
+                        </header>
+                        <div>
+                            <div>
+                                <img src="/images/Render.jpg" alt="" />
+                                <div>
+                                    <strong>Arena of 3D</strong>
+                                    <small>Exploring in world of 3D</small>
+                                </div>
+                                <button>
+                                    <span class="fas fa-plus"></span>
+                                    <span>Follow</span>
+                                </button>
+                            </div>
+                            <div>
+                                <img src="/images/css.png" alt="" />
+                                <div>
+                                    <strong>#CSS</strong>
+                                </div>
+                                <button>
+                                    <span class="fas fa-plus"></span>
+                                    <span>Follow</span>
+                                </button>
+                            </div>
+                            <div>
+                                <img src="/images/example-person.jpeg" alt="" />
+                                <div>
+                                    <strong>Pragati Govilkar</strong>
+                                    <small
+                                        >Medical Representative at Hindustan Uniliver</small
+                                    >
+                                </div>
+                                <button>
+                                    <span class="fas fa-plus"></span>
+                                    <span>Follow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="#">View all recommendations</a>
+                    </div>
+                </div>
+                <div id="linkedin-section">
+                    <section>
+                        <small>Ad</small>
+                        <a href="#">
+                            <span
+                                >Nayan, unlock your full potential with
+                                SkillSphere Premium</span
+                            >
+                            <div>
+                                <img src="/images/pic.jpeg" alt="" />
+                                <img
+                                    id="linkedin-key"
+                                    src="/images/linkedin-ad.png"
+                                    alt=""
+                                />
+                            </div>
+                            <strong>
+                                See who's viewed your profile in the last 90
+                                days
+                            </strong>
+                            <div>
+                                <button>Try for free</button>
+                            </div>
+                        </a>
+                    </section>
+                    <footer>
+                        <ul>
+                            <li>About</li>
+                            <li>Help Center</li>
+                            <li>
+                                Privacy & Terms<span
+                                    class="fas fa-angle-down"
+                                ></span>
+                            </li>
+                            <li>Advertising</li>
+                            <li>
+                                Business Services
+                                <span class="fas fa-angle-down"></span>
+                            </li>
+                            <li>Get the SkillSphere app</li>
+                            <li>More</li>
+                        </ul>
+                        <div>
+                            <strong>Skill<span>Sphere</span></strong>
+                            <span>SkillSphere Corporation © 2019</span>
+                        </div>
+                    </footer>
+                </div>
+            </aside>
+        </div>
+    </body>
+    <script src="/script.js"></script>
+    <script src="https://kit.fontawesome.com/3055f91a99.js"></script>
+</html>
